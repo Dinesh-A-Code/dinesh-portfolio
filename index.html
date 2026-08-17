@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinesh A | Portfolio</title>
+<meta name="description" content="Dinesh A — Computer Science Engineering student. Software development, problem solving, and building practical applications.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV (desktop bar + mobile header) ============ -->
+<header class="site-header glass-nav" id="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand" data-nav-link data-brand-link>Dinesh A</a>
+
+    <!-- Desktop nav links -->
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="#home" class="nav-link is-active" data-nav-link>Home</a>
+      <a href="#about" class="nav-link" data-nav-link>About</a>
+      <a href="#skills" class="nav-link" data-nav-link>Skills</a>
+      <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+      <a href="#problem-solving" class="nav-link" data-nav-link>Problem Solving</a>
+      <a href="#achievements" class="nav-link" data-nav-link>Achievements</a>
+      <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-sm" download>View Resume</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger-btn" id="open-drawer" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="drawer-overlay" id="drawer-overlay" hidden></div>
+<nav class="mobile-drawer glass-drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="drawer-top">
+    <span class="brand">Dinesh A</span>
+    <button class="icon-btn" id="close-drawer" aria-label="Close navigation menu">
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+  </div>
+  <div class="drawer-links">
+    <a href="#home" class="drawer-link is-active" data-drawer-link>Home</a>
+    <a href="#about" class="drawer-link" data-drawer-link>About</a>
+    <a href="#skills" class="drawer-link" data-drawer-link>Skills</a>
+    <a href="#projects" class="drawer-link" data-drawer-link>Projects</a>
+    <a href="#problem-solving" class="drawer-link" data-drawer-link>Problem Solving</a>
+    <a href="#github" class="drawer-link" data-drawer-link>GitHub</a>
+    <a href="#achievements" class="drawer-link" data-drawer-link>Achievements</a>
+    <a href="#contact" class="drawer-link" data-drawer-link>Contact</a>
+  </div>
+  <div class="drawer-bottom">
+    <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-block" download>View Resume</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="section hero scroll-target" id="home">
+    <div class="container">
+      <span class="eyebrow">Computer Science Engineering Student</span>
+      <h1 class="hero-title">Building solutions with code, curiosity and creativity.</h1>
+      <p class="lead">I'm a Computer Science Engineering student passionate about software development, problem solving, and building practical applications.</p>
+      <div class="btn-row">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section split-section scroll-target" id="about">
+    <div class="container split-grid">
+      <div class="split-label">
+        <span class="section-number">01 / Profile</span>
+        <h2 class="headline-md">About Me</h2>
+      </div>
+      <div class="split-content">
+        <div class="divider"></div>
+        <p class="body-lg">I am a Computer Science Engineering student passionate about software development, problem solving, and building practical applications. I enjoy learning through hands-on projects and continuously improving my technical skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section split-section scroll-target" id="skills">
+    <div class="container split-grid">
+      <div class="split-label">
+        <span class="section-number">02 / Expertise</span>
+        <h2 class="headline-md">Core Skills</h2>
+      </div>
+      <div class="split-content">
+        <div class="divider"></div>
+        <div class="skills-grid">
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">terminal</span>
+              Programming
+            </h3>
+            <div class="tag-row">
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">web</span>
+              Frontend
+            </h3>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">dns</span>
+              Backend
+            </h3>
+            <div class="tag-row">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">Django</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">database</span>
+              Database
+            </h3>
+            <div class="tag-row">
+              <span class="tag">MongoDB</span>
+              <span class="tag">Mongoose</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">build</span>
+              Tools
+            </h3>
+            <div class="tag-row">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">VS Code</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">memory</span>
+              AI / Data
+            </h3>
+            <div class="tag-row">
+              <span class="tag">AI/ML</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section scroll-target" id="projects">
+    <div class="container">
+      <span class="section-number">03 / Selected Work</span>
+      <h2 class="headline-md mb-section-head">Projects</h2>
+      <div class="divider mb-lg"></div>
+
+      <div class="project-list">
+
+        <!-- Project 1: RecordMate -->
+        <article class="project-row">
+          <div class="project-media" data-project="recordmate">
+            <img class="project-image" src="assets/projects/recordmate.png" alt="RecordMate application screenshot">
+            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">article</span>
+          </div>
+          <div class="project-info">
+            <h3 class="headline-md project-title hover-underline">
+              RecordMate
+              <span class="badge">Development Project</span>
+            </h3>
+            <p class="body-lg">A platform that connects people who need handwritten record work with people who can provide that service. Users can create record requests and providers can discover suitable nearby requests.</p>
+            <div class="project-meta">
+              <h4 class="label-caps project-meta-label">Technologies</h4>
+              <p class="technical-text project-tech">React, Vite, Tailwind CSS, Node.js, Express, MongoDB, Mongoose, JWT, Socket.IO</p>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-disabled="true">
+                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-disabled="true">
+                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: SD Flowers (media/info order reversed on desktop) -->
+        <article class="project-row project-row--reverse">
+          <div class="project-info">
+            <h3 class="headline-md project-title hover-underline">
+              SD Flowers
+              <span class="badge">Live Project</span>
+            </h3>
+            <p class="body-lg">A responsive website for a flower business including product browsing, categories, custom order form, and WhatsApp integration.</p>
+            <div class="project-meta">
+              <h4 class="label-caps project-meta-label">Technologies</h4>
+              <p class="technical-text project-tech">React, Vite, TypeScript, Tailwind CSS</p>
+            </div>
+            <div class="project-links">
+              <a href="https://sd-flowers.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-disabled="true">
+                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source
+              </a>
+            </div>
+          </div>
+          <div class="project-media" data-project="sd-flowers">
+            <img class="project-image" src="assets/projects/sd-flowers.png" alt="SD Flowers website screenshot">
+            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">local_florist</span>
+          </div>
+        </article>
+
+        <!-- Project 3: PhishSight -->
+        <article class="project-row">
+          <div class="project-media" data-project="phishsight">
+            <img class="project-image" src="assets/projects/phishsight.png" alt="PhishSight application screenshot">
+            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">security</span>
+          </div>
+          <div class="project-info">
+            <h3 class="headline-md project-title hover-underline">
+              PhishSight
+              <span class="badge">Development Project</span>
+            </h3>
+            <p class="body-lg">A cybersecurity project focused on detecting potentially phishing-related content using multiple suspicious signals.</p>
+            <div class="project-meta">
+              <h4 class="label-caps project-meta-label">Focus</h4>
+              <p class="technical-text project-tech">Cybersecurity, Threat Detection, Data Analysis</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM SOLVING / GITHUB (Code & Logic) ============ -->
+  <section class="section split-section scroll-target" id="problem-solving">
+    <div class="container split-grid">
+      <div class="split-label">
+        <span class="section-number">04 / Metrics</span>
+        <h2 class="headline-md">Code &amp; Logic</h2>
+      </div>
+      <div class="split-content">
+        <div class="divider"></div>
+        <div class="stats-grid">
+
+          <a class="glass-panel stat-card" href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">
+            <div class="stat-card-head">
+              <h3 class="headline-sm">LeetCode</h3>
+              <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">code_blocks</span>
+            </div>
+            <dl class="stat-rows">
+              <div class="stat-row">
+                <dt>Problems Solved</dt>
+                <dd class="stat-value stat-value--accent" data-stat="leetcode-solved">—</dd>
+              </div>
+              <div class="stat-row">
+                <dt>Max Streak</dt>
+                <dd class="stat-value">—</dd>
+              </div>
+              <div class="stat-row stat-row--last">
+                <dt>Contest Rating</dt>
+                <dd class="stat-value">—</dd>
+              </div>
+            </dl>
+            <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+          </a>
+
+          <a class="glass-panel stat-card scroll-target" id="github" href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">
+            <div class="stat-card-head">
+              <h3 class="headline-sm">GitHub</h3>
+              <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">terminal</span>
+            </div>
+            <dl class="stat-rows">
+              <div class="stat-row">
+                <dt>Repositories</dt>
+                <dd class="stat-value stat-value--accent" data-stat="github-repositories">—</dd>
+              </div>
+              <div class="stat-row">
+                <dt>Contributions</dt>
+                <dd class="stat-value">—</dd>
+              </div>
+              <div class="stat-row stat-row--last">
+                <dt>Top Language</dt>
+                <dd class="stat-value">—</dd>
+              </div>
+            </dl>
+            <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="section split-section scroll-target" id="achievements">
+    <div class="container split-grid">
+      <div class="split-label">
+        <span class="section-number">05 / Milestones</span>
+        <h2 class="headline-md">Achievements &amp; Certifications</h2>
+      </div>
+      <div class="split-content">
+        <div class="divider"></div>
+        <div class="skills-grid">
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">workspace_premium</span>
+              Certifications
+            </h3>
+            <div class="tag-row">
+              <span class="tag">Java for Beginners</span>
+              <span class="tag">HTML5</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">groups</span>
+              Participation
+            </h3>
+            <div class="tag-row">
+              <span class="tag">BlackBox AI Hackathon Participant</span>
+            </div>
+          </div>
+
+          <div class="glass-panel skill-card">
+            <h3 class="headline-sm skill-card-title">
+              <span class="material-symbols-outlined skill-icon" aria-hidden="true">work</span>
+              Experience
+            </h3>
+            <div class="tag-row">
+              <span class="tag">ISP Internship Offer / Selection</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section scroll-target" id="contact">
+    <div class="container">
+      <div class="contact-panel">
+        <div class="contact-intro">
+          <span class="section-number">06 / Connect</span>
+          <h2 class="headline-md contact-heading">Let's build something together.</h2>
+          <p class="body-lg contact-copy">I'm currently available for freelance projects and open to new full-time opportunities.</p>
+          <a class="contact-email" href="mailto:adinesh09092005@gmail.com">
+            adinesh09092005@gmail.com
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name" class="label-caps">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="email" class="label-caps">Email</label>
+            <input type="email" id="email" name="email" placeholder="adinesh09092005@gmail.com" autocomplete="email" required>
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="message" class="label-caps">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
+            <span class="form-error" id="message-error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block form-submit">Send Message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="brand footer-brand">Dinesh A</div>
+      <p class="body-base footer-copy">© 2026 Dinesh A. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/dinesh-a-code" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+      <a href="mailto:adinesh09092005@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

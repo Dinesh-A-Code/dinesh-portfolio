@@ -1,0 +1,42 @@
+name: Update Portfolio Stats
+
+# Runs automatically once a day and can also be triggered manually from
+# the Actions tab (workflow_dispatch). No API keys or repository secrets
+# are required — GitHub's and LeetCode's public endpoints are used, and
+# committing the result back uses the workflow's own automatically
+# provided GITHUB_TOKEN.
+on:
+  schedule:
+    - cron: '0 3 * * *' # once daily at 03:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch stats and update assets/data/stats.json
+        run: node scripts/update-stats.mjs
+
+      - name: Commit updated stats.json (if changed)
+        run: |
+          if git diff --quiet -- assets/data/stats.json; then
+            echo "No changes to assets/data/stats.json — nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/data/stats.json
+          git commit -m "chore: update GitHub/LeetCode stats"
+          git push
