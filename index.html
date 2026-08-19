@@ -3,8 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dinesh A | Portfolio</title>
-<meta name="description" content="Dinesh A — Computer Science Engineering student. Software development, problem solving, and building practical applications.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#131313">
+
+<title>Dinesh A | Computer Science Engineer &amp; Developer Portfolio</title>
+<meta name="description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight. Explore skills, projects, and get in touch.">
+<meta name="author" content="Dinesh A">
+
+<!--
+  og:image and og:url currently use paths relative to the deployed
+  site. For maximum compatibility with LinkedIn's and other social
+  crawlers, replace assets/favicon/og-image.png and the og:url value
+  below with fully-qualified absolute URLs once the site has a live
+  domain (e.g. https://your-domain.com/assets/favicon/og-image.png).
+-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dinesh A Portfolio">
+<meta property="og:title" content="Dinesh A | Computer Science Engineer & Developer Portfolio">
+<meta property="og:description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight.">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dinesh A | Computer Science Engineer & Developer Portfolio">
+<meta name="twitter:description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight.">
+<meta name="twitter:image" content="assets/favicon/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +66,7 @@
       <a href="#problem-solving" class="nav-link" data-nav-link>Problem Solving</a>
       <a href="#achievements" class="nav-link" data-nav-link>Achievements</a>
       <a href="#contact" class="nav-link" data-nav-link>Contact</a>
-      <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-sm" download>View Resume</a>
+      <a href="https://drive.google.com/drive/u/0/folders/1-1JE8qiAOMWBzTOG7tmxCpoL2Kj-WH6R" class="btn btn-primary"  target="_blank" rel="noopener noreferrer">View Resume</a>
     </nav>
 
     <!-- Mobile hamburger -->
@@ -212,11 +245,11 @@
               <p class="technical-text project-tech">React, Vite, Tailwind CSS, Node.js, Express, MongoDB, Mongoose, JWT, Socket.IO</p>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" aria-disabled="true">
+              <a href="#" class="project-link" aria-disabled="true" tabindex="-1">
                 <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo
               </a>
-              <a href="#" class="project-link" aria-disabled="true">
-                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source
+              <a href="https://github.com/Dinesh-A-Code/RecordMate" class="project-link" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source<span class="sr-only"> (opens in new tab)</span>
               </a>
             </div>
           </div>
@@ -236,9 +269,9 @@
             </div>
             <div class="project-links">
               <a href="https://sd-flowers.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">
-                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo
+                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo<span class="sr-only"> (opens in new tab)</span>
               </a>
-              <a href="#" class="project-link" aria-disabled="true">
+              <a href="#" class="project-link" aria-disabled="true" tabindex="-1">
                 <span class="material-symbols-outlined" aria-hidden="true">code</span> Source
               </a>
             </div>
@@ -283,29 +316,33 @@
         <div class="divider"></div>
         <div class="stats-grid">
 
-          <a class="glass-panel stat-card" href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">
+          <a class="glass-panel stat-card" href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer" aria-label="View full LeetCode profile (opens in new tab)">
             <div class="stat-card-head">
               <h3 class="headline-sm">LeetCode</h3>
               <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">code_blocks</span>
             </div>
             <dl class="stat-rows">
               <div class="stat-row">
-                <dt>Problems Solved</dt>
+                <dt>Solved</dt>
                 <dd class="stat-value stat-value--accent" data-stat="leetcode-solved">—</dd>
               </div>
               <div class="stat-row">
-                <dt>Max Streak</dt>
-                <dd class="stat-value">—</dd>
+                <dt>Easy</dt>
+                <dd class="stat-value" data-stat="leetcode-easy">—</dd>
+              </div>
+              <div class="stat-row">
+                <dt>Medium</dt>
+                <dd class="stat-value" data-stat="leetcode-medium">—</dd>
               </div>
               <div class="stat-row stat-row--last">
-                <dt>Contest Rating</dt>
-                <dd class="stat-value">—</dd>
+                <dt>Hard</dt>
+                <dd class="stat-value" data-stat="leetcode-hard">—</dd>
               </div>
             </dl>
             <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
           </a>
 
-          <a class="glass-panel stat-card scroll-target" id="github" href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">
+          <a class="glass-panel stat-card scroll-target" id="github" href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer" aria-label="View full GitHub profile (opens in new tab)">
             <div class="stat-card-head">
               <h3 class="headline-sm">GitHub</h3>
               <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">terminal</span>
@@ -315,13 +352,9 @@
                 <dt>Repositories</dt>
                 <dd class="stat-value stat-value--accent" data-stat="github-repositories">—</dd>
               </div>
-              <div class="stat-row">
-                <dt>Contributions</dt>
-                <dd class="stat-value">—</dd>
-              </div>
               <div class="stat-row stat-row--last">
-                <dt>Top Language</dt>
-                <dd class="stat-value">—</dd>
+                <dt>Followers</dt>
+                <dd class="stat-value" data-stat="github-followers">—</dd>
               </div>
             </dl>
             <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
@@ -352,6 +385,14 @@
               <span class="tag">Java for Beginners</span>
               <span class="tag">HTML5</span>
             </div>
+            <div class="project-links">
+              <a href="assets/certificates/java-for-beginners.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="Java for Beginners certificate" aria-label="View Java for Beginners certificate (opens in new tab)">
+                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+              </a>
+              <a href="assets/certificates/html5.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="HTML5 certificate" aria-label="View HTML5 certificate (opens in new tab)">
+                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+              </a>
+            </div>
           </div>
 
           <div class="glass-panel skill-card">
@@ -362,6 +403,11 @@
             <div class="tag-row">
               <span class="tag">BlackBox AI Hackathon Participant</span>
             </div>
+            <div class="project-links">
+              <a href="assets/certificates/blackbox-ai-hackathon-participant.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="BlackBox AI Hackathon participation certificate" aria-label="View BlackBox AI Hackathon participation certificate (opens in new tab)">
+                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+              </a>
+            </div>
           </div>
 
           <div class="glass-panel skill-card">
@@ -371,6 +417,11 @@
             </h3>
             <div class="tag-row">
               <span class="tag">ISP Internship Offer / Selection</span>
+            </div>
+            <div class="project-links">
+              <a href="assets/certificates/isp-internship-offer.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="ISP Internship offer / selection document" aria-label="View ISP Internship offer or selection document (opens in new tab)">
+                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+              </a>
             </div>
           </div>
 
@@ -426,9 +477,9 @@
       <p class="body-base footer-copy">© 2026 Dinesh A. All rights reserved.</p>
     </div>
     <div class="footer-links">
-      <a href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/dinesh-a-code" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+      <a href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a>
+      <a href="https://www.linkedin.com/in/dinesh-a-code" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
+      <a href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">LeetCode<span class="sr-only"> (opens in new tab)</span></a>
       <a href="mailto:adinesh09092005@gmail.com">Email</a>
     </div>
   </div>

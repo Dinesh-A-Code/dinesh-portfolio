@@ -331,19 +331,18 @@
 
   /* ------------------------------------------------------------------
    * LeetCode / GitHub stats
-   * Loads assets/data/stats.json and fills in whichever stat values it
-   * provides. Only the two stat slots that currently have a matching
-   * JSON field (LeetCode "Problems Solved" and GitHub "Repositories")
-   * are updated — everything else in the cards keeps its existing
-   * placeholder. If the file is missing, fails to load, or the JSON is
-   * malformed, the existing placeholder values are left exactly as
-   * they are and nothing is shown to the user.
+   * Loads assets/data/stats.json and fills in every stat slot that has
+   * a matching JSON field: LeetCode solved/easy/medium/hard, and
+   * GitHub repositories/followers. Each [data-stat] element's value
+   * (e.g. "leetcode-easy") maps directly to a "<section>.<field>" path
+   * in the JSON. If the file is missing, fails to load, the JSON is
+   * malformed, or an individual field is absent, that slot's existing
+   * placeholder is left exactly as it is and nothing is shown to the
+   * user.
    * ------------------------------------------------------------------ */
   async function initStats() {
-    const leetcodeSolvedEl = document.querySelector('[data-stat="leetcode-solved"]');
-    const githubReposEl = document.querySelector('[data-stat="github-repositories"]');
-
-    if (!leetcodeSolvedEl && !githubReposEl) return;
+    const statEls = Array.from(document.querySelectorAll('[data-stat]'));
+    if (!statEls.length) return;
 
     try {
       const response = await fetch('assets/data/stats.json');
@@ -351,13 +350,13 @@
 
       const data = await response.json();
 
-      if (leetcodeSolvedEl && data.leetcode && typeof data.leetcode.solved === 'number') {
-        leetcodeSolvedEl.textContent = String(data.leetcode.solved);
-      }
-
-      if (githubReposEl && data.github && typeof data.github.repositories === 'number') {
-        githubReposEl.textContent = String(data.github.repositories);
-      }
+      statEls.forEach((el) => {
+        const [section, field] = el.dataset.stat.split('-');
+        const value = data?.[section]?.[field];
+        if (typeof value === 'number') {
+          el.textContent = String(value);
+        }
+      });
     } catch (error) {
       // Network error or invalid JSON — silently keep the placeholders.
     }

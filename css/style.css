@@ -147,6 +147,27 @@ h1, h2, h3, h4, p {
   outline-offset: 2px;
 }
 
+/* Visually hidden but still announced by screen readers — used for
+   "(opens in new tab)" hints on external links. Adds no visual change. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Placeholder links marked aria-disabled (project links with no URL
+   yet) shouldn't be reachable by mouse or keyboard until a real URL
+   is added — purely behavioral, no visual change. */
+a[aria-disabled="true"] {
+  pointer-events: none;
+}
+
 /* ---------- Layout helpers ---------- */
 .container {
   max-width: var(--container-max);
@@ -178,7 +199,7 @@ h1, h2, h3, h4, p {
    to clear the fixed header. --header-height is kept in sync with the
    header's real rendered height via JS (see syncHeaderHeight in script.js). */
 .scroll-target {
-  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+  scroll-margin-top: calc(var(--header-height));
 }
 
 main {
@@ -781,7 +802,15 @@ body.drawer-open {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+/* Achievement cards: certificate links follow a tag-row instead of the
+   project description block, which normally supplies this gap via its
+   own margin-bottom. Scoped to that one combination only. */
+.tag-row + .project-links {
+  margin-top: 1.5rem;
 }
 
 .project-link {
