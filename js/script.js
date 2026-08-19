@@ -345,7 +345,17 @@
     if (!statEls.length) return;
 
     try {
-      const response = await fetch('assets/data/stats.json');
+      // Cache protection: a plain "assets/data/stats.json" request can be
+      // served stale by the browser's HTTP cache or an intermediate CDN
+      // even after the automation commits a fresh file, since both key
+      // on the URL and neither knows the file changed. The timestamp
+      // query string makes every page load request a distinct URL (so
+      // no cache layer keyed on the full URL can return a stale hit),
+      // and { cache: 'no-store' } additionally tells the browser itself
+      // to skip its HTTP cache for this request entirely.
+      const response = await fetch(`assets/data/stats.json?v=${Date.now()}`, {
+        cache: 'no-store',
+      });
       if (!response.ok) return;
 
       const data = await response.json();
