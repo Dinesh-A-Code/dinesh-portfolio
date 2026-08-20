@@ -1,20 +1,16 @@
 /**
- * Dinesh A — Portfolio
- * Vanilla JS: mobile drawer, active nav highlighting, and
- * client-side contact form validation.
+ * Dinesh A — Software Developer Portfolio
+ * Vanilla JS: Navigation, Mobile Drawer, Live Stats Animation,
+ * Ambient Mouse Spotlight, Form Validation, and Scroll Reveals.
  */
 
 (function () {
   'use strict';
 
   /* ------------------------------------------------------------------
-   * Fixed header height sync
-   * Keeps the --header-height CSS custom property in sync with the
-   * real rendered height of the fixed header, so scroll-margin-top
-   * (applied to .scroll-target elements) always clears the header
-   * correctly, on both desktop and mobile, at any viewport width.
+   * 1. Header Height Sync & Scrolled State
    * ------------------------------------------------------------------ */
-  function syncHeaderHeight() {
+  function initHeaderSync() {
     const header = document.getElementById('site-header');
     if (!header) return;
 
@@ -22,7 +18,18 @@
       document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
     }
 
+    function checkScroll() {
+      if (window.scrollY > 20) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    }
+
     apply();
+    checkScroll();
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
 
     let resizeTimer = null;
     window.addEventListener('resize', () => {
@@ -30,16 +37,15 @@
       resizeTimer = window.setTimeout(apply, 100);
     });
 
-    // Header height can change once web fonts finish loading.
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(apply).catch(() => {});
     }
   }
 
   /* ------------------------------------------------------------------
-   * Mobile drawer
+   * 2. Mobile Navigation Drawer
    * ------------------------------------------------------------------ */
-  function initDrawer() {
+  function initMobileDrawer() {
     const openBtn = document.getElementById('open-drawer');
     const closeBtn = document.getElementById('close-drawer');
     const drawer = document.getElementById('mobile-drawer');
@@ -51,7 +57,6 @@
       drawer.classList.add('is-open');
       drawer.setAttribute('aria-hidden', 'false');
       overlay.hidden = false;
-      // allow the browser to paint before transitioning opacity
       requestAnimationFrame(() => overlay.classList.add('is-visible'));
       openBtn.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
@@ -65,26 +70,24 @@
       openBtn.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('drawer-open');
       openBtn.focus();
-      // wait for the CSS transition to finish before hiding
+
       window.setTimeout(() => {
         if (!drawer.classList.contains('is-open')) {
           overlay.hidden = true;
         }
-      }, 300);
+      }, 350);
     }
 
     openBtn.addEventListener('click', openDrawer);
     closeBtn.addEventListener('click', closeDrawer);
     overlay.addEventListener('click', closeDrawer);
 
-    // Close on Escape
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && drawer.classList.contains('is-open')) {
         closeDrawer();
       }
     });
 
-    // Close drawer whenever a nav link inside it is used
     const drawerLinks = drawer.querySelectorAll('[data-drawer-link]');
     drawerLinks.forEach((link) => {
       link.addEventListener('click', () => {
@@ -94,20 +97,7 @@
   }
 
   /* ------------------------------------------------------------------
-   * Active navigation state
-   *
-   * Two things drive the active link:
-   *  1. Clicking a nav link marks it active immediately, and that
-   *     choice is locked in until the resulting scroll settles, so the
-   *     scroll-tracking logic below can't "steal back" the highlight
-   *     mid-animation (the old off-by-one bug).
-   *  2. While the user scrolls freely (no recent click), the active
-   *     link is recalculated from scratch on every scroll frame: the
-   *     active section is the last one whose top has crossed a probe
-   *     line placed just below the fixed header. This replaces the
-   *     previous IntersectionObserver-based approach, whose percentage
-   *     based rootMargin didn't line up with the fixed header and
-   *     produced the "highlight is one section ahead" bug.
+   * 3. Active Navigation State Tracking
    * ------------------------------------------------------------------ */
   function initActiveNav() {
     const header = document.getElementById('site-header');
@@ -132,14 +122,9 @@
 
     function getProbeLine() {
       const headerHeight = header ? header.offsetHeight : 0;
-      // Must match the section scroll offset used by CSS
-      // (scroll-margin-top: calc(var(--header-height) + 1.5rem) on
-      // .scroll-target), plus a couple of px of slack, so a section that
-      // has just finished scrolling into its resting position is
-      // recognised as "reached" rather than missed by a few pixels.
       const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
       const scrollOffsetExtra = 1.5 * rootFontSize;
-      return headerHeight + scrollOffsetExtra + 2;
+      return headerHeight + scrollOffsetExtra + 10;
     }
 
     function recalcActive() {
@@ -156,10 +141,8 @@
         }
       }
 
-      // Near the bottom of the page the last section may never reach
-      // the probe line (e.g. a short final section) — force it active.
       const atBottom =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
       if (atBottom) {
         active = sections[sections.length - 1];
       }
@@ -167,7 +150,6 @@
       setActive(active.id);
     }
 
-    // Scroll-linked recalculation, throttled to animation frames.
     let ticking = false;
     function onScroll() {
       if (!ticking) {
@@ -178,23 +160,18 @@
         ticking = true;
       }
 
-      // Treat "no scroll movement for a short while" as the scroll
-      // having settled, so a manual click override doesn't linger and
-      // block the natural scroll-driven state afterwards.
       if (manualOverrideId) {
         window.clearTimeout(manualReleaseTimer);
         manualReleaseTimer = window.setTimeout(() => {
           manualOverrideId = null;
           recalcActive();
-        }, 150);
+        }, 200);
       }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', recalcActive);
 
-    // Clicking any nav/drawer/brand link activates it immediately and
-    // locks that state until the resulting smooth scroll settles.
     allLinks.forEach((link) => {
       link.addEventListener('click', () => {
         const href = link.getAttribute('href') || '';
@@ -209,16 +186,174 @@
         manualReleaseTimer = window.setTimeout(() => {
           manualOverrideId = null;
           recalcActive();
-        }, 150);
+        }, 200);
       });
     });
 
-    // Initial state on page load (handles a direct #hash URL too).
     recalcActive();
   }
 
   /* ------------------------------------------------------------------
-   * Contact form — client-side validation only (no backend yet)
+   * 4. Ambient Interactive Mouse Spotlight
+   * ------------------------------------------------------------------ */
+  function initAmbientSpotlight() {
+    const spotlight = document.querySelector('.mouse-spotlight');
+    if (!spotlight || window.matchMedia('(pointer: coarse)').matches) return;
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+    let isVisible = false;
+
+    window.addEventListener('mousemove', (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY + window.scrollY;
+
+      if (!isVisible) {
+        spotlight.style.opacity = '1';
+        isVisible = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => {
+      spotlight.style.opacity = '0';
+      isVisible = false;
+    });
+
+    function animateSpotlight() {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+
+      spotlight.style.left = `${currentX}px`;
+      spotlight.style.top = `${currentY}px`;
+
+      requestAnimationFrame(animateSpotlight);
+    }
+
+    requestAnimationFrame(animateSpotlight);
+  }
+
+  /* ------------------------------------------------------------------
+   * 5. Live LeetCode & GitHub Stats + Animated Counter
+   * ------------------------------------------------------------------ */
+  function animateValue(element, start, end, duration) {
+    if (start === end) {
+      element.textContent = String(end);
+      return;
+    }
+    const range = end - start;
+    const startTime = performance.now();
+
+    function update(time) {
+      const progress = Math.min((time - startTime) / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3); // Ease out cubic
+      const val = Math.floor(start + range * easeProgress);
+      element.textContent = String(val);
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = String(end);
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  async function initLiveStats() {
+    const statEls = Array.from(document.querySelectorAll('[data-stat]'));
+    if (!statEls.length) return;
+
+    let statsData = {
+      leetcode: { solved: 181, easy: 86, medium: 73, hard: 22 },
+      github: { repositories: 6, followers: 4 }
+    };
+
+    try {
+      const response = await fetch('assets/data/stats.json');
+      if (response.ok) {
+        const json = await response.json();
+        if (json?.leetcode) statsData.leetcode = json.leetcode;
+        if (json?.github) statsData.github = json.github;
+      }
+    } catch (error) {
+      // Fallback to initial stats
+    }
+
+    let hasAnimated = false;
+
+    function triggerStatsAnimation() {
+      if (hasAnimated || !statsData) return;
+      hasAnimated = true;
+
+      statEls.forEach((el) => {
+        const [section, field] = el.dataset.stat.split('-');
+        const targetVal = statsData?.[section]?.[field];
+        if (typeof targetVal === 'number') {
+          animateValue(el, 0, targetVal, 1200);
+        }
+      });
+    }
+
+    const statsSection = document.getElementById('problem-solving');
+    if (statsSection && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            triggerStatsAnimation();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(statsSection);
+    } else {
+      triggerStatsAnimation();
+    }
+  }
+
+  /* ------------------------------------------------------------------
+   * 6. Scroll Reveal Observer
+   * ------------------------------------------------------------------ */
+  function initScrollReveal() {
+    document.documentElement.classList.add('js-anim');
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    if (!revealElements.length) return;
+
+    function checkVisible() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= windowHeight + 80) {
+          el.classList.add('is-revealed');
+        }
+      });
+    }
+
+    checkVisible();
+    window.addEventListener('scroll', checkVisible, { passive: true });
+    window.addEventListener('resize', checkVisible);
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '120px 0px 40px 0px',
+        threshold: 0.05
+      });
+
+      revealElements.forEach((el) => observer.observe(el));
+    }
+  }
+
+  /* ------------------------------------------------------------------
+   * 7. Contact Form Validation
    * ------------------------------------------------------------------ */
   function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -232,9 +367,9 @@
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     function setError(field, errorEl, message) {
-      const wrapper = field.closest('.form-field');
-      errorEl.textContent = message;
-      wrapper.classList.toggle('has-error', Boolean(message));
+      const wrapper = field.closest('.form-group') || field.closest('.form-field');
+      if (errorEl) errorEl.textContent = message;
+      if (wrapper) wrapper.classList.toggle('has-error', Boolean(message));
     }
 
     function validateName() {
@@ -252,7 +387,7 @@
       const value = emailField.value.trim();
       const errorEl = document.getElementById('email-error');
       if (!value) {
-        setError(emailField, errorEl, 'Please enter your email.');
+        setError(emailField, errorEl, 'Please enter your email address.');
         return false;
       }
       if (!emailPattern.test(value)) {
@@ -267,7 +402,7 @@
       const value = messageField.value.trim();
       const errorEl = document.getElementById('message-error');
       if (!value) {
-        setError(messageField, errorEl, 'Please enter a message.');
+        setError(messageField, errorEl, 'Please enter your message.');
         return false;
       }
       if (value.length < 10) {
@@ -290,97 +425,64 @@
       const isMessageValid = validateMessage();
 
       if (!isNameValid || !isEmailValid || !isMessageValid) {
-        status.textContent = 'Please fix the highlighted fields.';
-        status.style.color = '#e08585';
+        status.textContent = 'Please review and fill the required fields.';
+        status.style.color = '#EF4444';
         return;
       }
 
-      // No backend is wired up yet. This is intentionally client-side only.
-      status.textContent = 'Thanks! This form is not yet connected to a backend, so your message was not sent.';
-      status.style.color = '';
-      form.reset();
+      status.textContent = 'Preparing email draft...';
+      status.style.color = '#059669';
+
+      const mailtoSubject = encodeURIComponent(`Portfolio Inquiry from ${nameField.value.trim()}`);
+      const mailtoBody = encodeURIComponent(`${messageField.value.trim()}\n\n---\nFrom: ${nameField.value.trim()} (${emailField.value.trim()})`);
+      
+      window.setTimeout(() => {
+        window.location.href = `mailto:adinesh09092005@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        status.textContent = 'Email client opened! You can also contact adinesh09092005@gmail.com directly.';
+        form.reset();
+      }, 500);
     });
   }
 
   /* ------------------------------------------------------------------
-   * Project screenshots
-   * Each .project-media has a real <img> pointing at assets/projects/
-   * plus the original icon placeholder. If the image file exists and
-   * loads, we reveal it and hide the icon; if it 404s (not added yet)
-   * or is still loading, the icon placeholder stays visible exactly as
-   * before — no missing-image icon is ever shown to the user.
+   * 8. Copy Email Utility
    * ------------------------------------------------------------------ */
-  function initProjectImages() {
-    const images = document.querySelectorAll('.project-media .project-image');
-
-    images.forEach((img) => {
-      const reveal = () => img.closest('.project-media').classList.add('has-image');
-
-      if (img.complete && img.naturalWidth > 0) {
-        // Already loaded from cache by the time this script runs.
-        reveal();
-        return;
-      }
-
-      img.addEventListener('load', reveal);
-      img.addEventListener('error', () => {
-        // Leave the icon placeholder visible; nothing else to do.
-      });
-    });
-  }
-
-  /* ------------------------------------------------------------------
-   * LeetCode / GitHub stats
-   * Loads assets/data/stats.json and fills in every stat slot that has
-   * a matching JSON field: LeetCode solved/easy/medium/hard, and
-   * GitHub repositories/followers. Each [data-stat] element's value
-   * (e.g. "leetcode-easy") maps directly to a "<section>.<field>" path
-   * in the JSON. If the file is missing, fails to load, the JSON is
-   * malformed, or an individual field is absent, that slot's existing
-   * placeholder is left exactly as it is and nothing is shown to the
-   * user.
-   * ------------------------------------------------------------------ */
-  async function initStats() {
-    const statEls = Array.from(document.querySelectorAll('[data-stat]'));
-    if (!statEls.length) return;
-
-    try {
-      // Cache protection: a plain "assets/data/stats.json" request can be
-      // served stale by the browser's HTTP cache or an intermediate CDN
-      // even after the automation commits a fresh file, since both key
-      // on the URL and neither knows the file changed. The timestamp
-      // query string makes every page load request a distinct URL (so
-      // no cache layer keyed on the full URL can return a stale hit),
-      // and { cache: 'no-store' } additionally tells the browser itself
-      // to skip its HTTP cache for this request entirely.
-      const response = await fetch(`assets/data/stats.json?v=${Date.now()}`, {
-        cache: 'no-store',
-      });
-      if (!response.ok) return;
-
-      const data = await response.json();
-
-      statEls.forEach((el) => {
-        const [section, field] = el.dataset.stat.split('-');
-        const value = data?.[section]?.[field];
-        if (typeof value === 'number') {
-          el.textContent = String(value);
+  function initCopyEmail() {
+    const copyBtns = document.querySelectorAll('[data-copy-email]');
+    copyBtns.forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const email = 'adinesh09092005@gmail.com';
+        try {
+          await navigator.clipboard.writeText(email);
+          const valEl = btn.querySelector('.contact-method-val');
+          if (valEl) {
+            const orig = valEl.textContent;
+            valEl.textContent = 'Copied to Clipboard! ✓';
+            valEl.style.color = 'var(--accent-emerald)';
+            setTimeout(() => {
+              valEl.textContent = orig;
+              valEl.style.color = '';
+            }, 2500);
+          }
+        } catch (err) {
+          window.location.href = `mailto:${email}`;
         }
       });
-    } catch (error) {
-      // Network error or invalid JSON — silently keep the placeholders.
-    }
+    });
   }
 
   /* ------------------------------------------------------------------
-   * Init
+   * 9. Initialization
    * ------------------------------------------------------------------ */
   document.addEventListener('DOMContentLoaded', () => {
-    syncHeaderHeight();
-    initDrawer();
+    initHeaderSync();
+    initMobileDrawer();
     initActiveNav();
+    initAmbientSpotlight();
+    initLiveStats();
+    initScrollReveal();
     initContactForm();
-    initProjectImages();
-    initStats();
+    initCopyEmail();
   });
 })();

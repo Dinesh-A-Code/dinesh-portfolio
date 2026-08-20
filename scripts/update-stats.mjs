@@ -88,20 +88,9 @@ async function fetchLeetCodeStats() {
     }
   `;
 
-  const response = await fetch('https://leetcode.com/graphql/', {
+  const response = await fetch('https://leetcode.com/graphql', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      // LeetCode's public GraphQL endpoint returns 403 for requests
-      // that don't look like they came from a leetcode.com page — no
-      // login/cookie is required for this public query, but Referer,
-      // Origin, and a browser-like User-Agent are. Without these, the
-      // request is rejected before it ever reaches the query resolver.
-      Referer: 'https://leetcode.com',
-      Origin: 'https://leetcode.com',
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query,
       variables: { username: LEETCODE_USERNAME },

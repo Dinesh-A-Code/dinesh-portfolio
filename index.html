@@ -1,490 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#131313">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F8FAFC">
 
-<title>Dinesh A | Computer Science Engineer &amp; Developer Portfolio</title>
-<meta name="description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight. Explore skills, projects, and get in touch.">
-<meta name="author" content="Dinesh A">
+  <!-- Primary Meta Tags -->
+  <title>Dinesh — Software Developer &amp; Computer Science Engineer</title>
+  <meta name="title" content="Dinesh — Software Developer & Computer Science Engineer">
+  <meta name="description" content="Portfolio of Dinesh, a Computer Science Engineering student and Software Developer building practical applications including RecordMate, SD Flowers, and PhishSight.">
+  <meta name="author" content="Dinesh">
 
-<!--
-  og:image and og:url currently use paths relative to the deployed
-  site. For maximum compatibility with LinkedIn's and other social
-  crawlers, replace assets/favicon/og-image.png and the og:url value
-  below with fully-qualified absolute URLs once the site has a live
-  domain (e.g. https://your-domain.com/assets/favicon/og-image.png).
--->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Dinesh A Portfolio">
-<meta property="og:title" content="Dinesh A | Computer Science Engineer & Developer Portfolio">
-<meta property="og:description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight.">
-<meta property="og:image" content="assets/favicon/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_US">
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dinesh Portfolio">
+  <meta property="og:title" content="Dinesh — Software Developer &amp; Computer Science Engineer">
+  <meta property="og:description" content="Explore Dinesh's projects, technical capabilities, problem-solving journey, and engineering credentials.">
+  <meta property="og:image" content="assets/favicon/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dinesh A | Computer Science Engineer & Developer Portfolio">
-<meta name="twitter:description" content="Portfolio of Dinesh A, a Computer Science Engineering student building practical software projects including RecordMate, SD Flowers, and PhishSight.">
-<meta name="twitter:image" content="assets/favicon/og-image.png">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dinesh — Software Developer &amp; Computer Science Engineer">
+  <meta name="twitter:description" content="Explore Dinesh's projects, technical capabilities, problem-solving journey, and engineering credentials.">
+  <meta name="twitter:image" content="assets/favicon/og-image.png">
 
-<!-- Favicons -->
-<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Skip link for accessibility -->
-<a class="skip-link" href="#main">Skip to content</a>
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- ============ NAV (desktop bar + mobile header) ============ -->
-<header class="site-header glass-nav" id="site-header">
-  <div class="container header-inner">
-    <a href="#home" class="brand" data-nav-link data-brand-link>Dinesh A</a>
+  <!-- Ambient Light Atmosphere Layer -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-blob ambient-blob--indigo"></div>
+    <div class="ambient-blob ambient-blob--violet"></div>
+    <div class="ambient-blob ambient-blob--cyan"></div>
+    <div class="ambient-blob ambient-blob--blue"></div>
+    <div class="ambient-grid"></div>
+    <div class="mouse-spotlight"></div>
+  </div>
 
-    <!-- Desktop nav links -->
-    <nav class="primary-nav" aria-label="Primary">
-      <a href="#home" class="nav-link is-active" data-nav-link>Home</a>
-      <a href="#about" class="nav-link" data-nav-link>About</a>
-      <a href="#skills" class="nav-link" data-nav-link>Skills</a>
-      <a href="#projects" class="nav-link" data-nav-link>Projects</a>
-      <a href="#problem-solving" class="nav-link" data-nav-link>Problem Solving</a>
-      <a href="#achievements" class="nav-link" data-nav-link>Achievements</a>
-      <a href="#contact" class="nav-link" data-nav-link>Contact</a>
-      <a href="https://drive.google.com/drive/u/0/folders/1-1JE8qiAOMWBzTOG7tmxCpoL2Kj-WH6R" class="btn btn-primary"  target="_blank" rel="noopener noreferrer">View Resume</a>
+  <!-- =========================================================================
+       FLOATING GLASS NAVBAR
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#home" class="brand" data-nav-link data-brand-link aria-label="Dinesh Home">
+        <span class="brand-text">Dinesh</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link is-active" data-nav-link>Home</a>
+        <a href="#capabilities" class="nav-link" data-nav-link>Skills</a>
+        <a href="#about" class="nav-link" data-nav-link>About</a>
+        <a href="#education" class="nav-link" data-nav-link>Education</a>
+        <a href="#certifications" class="nav-link" data-nav-link>Certificates</a>
+        <a href="#experience" class="nav-link" data-nav-link>Experience</a>
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+        <a href="#problem-solving" class="nav-link" data-nav-link>Solutions</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+          <span>View Resume</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="open-drawer" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================= -->
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">DA</span>
+        <span class="brand-text">Dinesh</span>
+      </div>
+      <button class="drawer-close-btn" id="close-drawer" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <nav class="drawer-links">
+      <a href="#home" class="drawer-link is-active" data-drawer-link>Home</a>
+      <a href="#capabilities" class="drawer-link" data-drawer-link>Skills &amp; Capabilities</a>
+      <a href="#about" class="drawer-link" data-drawer-link>About Me</a>
+      <a href="#education" class="drawer-link" data-drawer-link>Education</a>
+      <a href="#certifications" class="drawer-link" data-drawer-link>Certificates</a>
+      <a href="#experience" class="drawer-link" data-drawer-link>Experience</a>
+      <a href="#projects" class="drawer-link" data-drawer-link>Featured Projects</a>
+      <a href="#problem-solving" class="drawer-link" data-drawer-link>Problem Solving</a>
+      <a href="#contact" class="drawer-link" data-drawer-link>Contact Me</a>
     </nav>
 
-    <!-- Mobile hamburger -->
-    <button class="hamburger-btn" id="open-drawer" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-    </button>
-  </div>
-</header>
-
-<!-- ============ MOBILE DRAWER ============ -->
-<div class="drawer-overlay" id="drawer-overlay" hidden></div>
-<nav class="mobile-drawer glass-drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
-  <div class="drawer-top">
-    <span class="brand">Dinesh A</span>
-    <button class="icon-btn" id="close-drawer" aria-label="Close navigation menu">
-      <span class="material-symbols-outlined" aria-hidden="true">close</span>
-    </button>
-  </div>
-  <div class="drawer-links">
-    <a href="#home" class="drawer-link is-active" data-drawer-link>Home</a>
-    <a href="#about" class="drawer-link" data-drawer-link>About</a>
-    <a href="#skills" class="drawer-link" data-drawer-link>Skills</a>
-    <a href="#projects" class="drawer-link" data-drawer-link>Projects</a>
-    <a href="#problem-solving" class="drawer-link" data-drawer-link>Problem Solving</a>
-    <a href="#github" class="drawer-link" data-drawer-link>GitHub</a>
-    <a href="#achievements" class="drawer-link" data-drawer-link>Achievements</a>
-    <a href="#contact" class="drawer-link" data-drawer-link>Contact</a>
-  </div>
-  <div class="drawer-bottom">
-    <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-block" download>View Resume</a>
-  </div>
-</nav>
-
-<main id="main">
-
-  <!-- ============ HERO ============ -->
-  <section class="section hero scroll-target" id="home">
-    <div class="container">
-      <span class="eyebrow">Computer Science Engineering Student</span>
-      <h1 class="hero-title">Building solutions with code, curiosity and creativity.</h1>
-      <p class="lead">I'm a Computer Science Engineering student passionate about software development, problem solving, and building practical applications.</p>
-      <div class="btn-row">
-        <a href="#projects" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
+    <div class="drawer-footer">
+      <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">
+        <span>Download Resume (PDF)</span>
+      </a>
     </div>
-  </section>
+  </aside>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section split-section scroll-target" id="about">
-    <div class="container split-grid">
-      <div class="split-label">
-        <span class="section-number">01 / Profile</span>
-        <h2 class="headline-md">About Me</h2>
-      </div>
-      <div class="split-content">
-        <div class="divider"></div>
-        <p class="body-lg">I am a Computer Science Engineering student passionate about software development, problem solving, and building practical applications. I enjoy learning through hands-on projects and continuously improving my technical skills.</p>
-      </div>
-    </div>
-  </section>
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main id="main">
 
-  <!-- ============ SKILLS ============ -->
-  <section class="section split-section scroll-target" id="skills">
-    <div class="container split-grid">
-      <div class="split-label">
-        <span class="section-number">02 / Expertise</span>
-        <h2 class="headline-md">Core Skills</h2>
-      </div>
-      <div class="split-content">
-        <div class="divider"></div>
-        <div class="skills-grid">
+    <!-- =======================================================================
+         SECTION: HERO (00 / INTRO)
+         ======================================================================= -->
+    <section class="section hero-section scroll-target" id="home">
+      <div class="container">
+        <div class="hero-grid">
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">terminal</span>
-              Programming
-            </h3>
-            <div class="tag-row">
-              <span class="tag">Java</span>
-              <span class="tag">Python</span>
-              <span class="tag">JavaScript</span>
+          <!-- Hero Left Content -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="glass-pill hero-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Available for Opportunities • CSE Student</span>
+            </div>
+
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Dinesh</h1>
+            <div class="hero-role-wrapper">
+              <span class="text-gradient">Software Developer</span>
+            </div>
+
+            <p class="hero-bio">
+              A Computer Science Engineering student who builds practical software solutions, solves algorithmic challenges, and leverages modern technologies to turn ideas into impactful digital products.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View My Work</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="assets/resume/Dinesh_A_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <span>View Resume</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials" aria-label="Social Profiles">
+              <a href="https://github.com/Dinesh-A-Code" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in new tab)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/dinesh-a-code" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in new tab)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://leetcode.com/u/Dinesh_A_Code/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile (opens in new tab)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.604-.488-1.328-.79-2.096-.867-.09-.009-.18-.013-.27-.013zM16.5 13a1.5 1.5 0 1 0 0 3h6a1.5 1.5 0 1 0 0-3h-6z"/></svg>
+              </a>
+              <a href="mailto:adinesh09092005@gmail.com" class="social-link" aria-label="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </a>
             </div>
           </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">web</span>
-              Frontend
-            </h3>
-            <div class="tag-row">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">React</span>
-              <span class="tag">Vite</span>
-              <span class="tag">Tailwind CSS</span>
-            </div>
-          </div>
+          <!-- Hero Right Visual Portrait -->
+          <div class="hero-visual reveal-on-scroll delay-1">
+            <div class="portrait-halo" aria-hidden="true"></div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">dns</span>
-              Backend
-            </h3>
-            <div class="tag-row">
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">Django</span>
+            <!-- Floating Micro Cards -->
+            <div class="hero-floating-card floating-card-1" aria-hidden="true">
+              <div class="card-num">FOCUS</div>
+              <div class="card-title">Full-Stack Dev</div>
+              <div class="card-desc">React, Node.js &amp; Modern Cloud Applications</div>
             </div>
-          </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">database</span>
-              Database
-            </h3>
-            <div class="tag-row">
-              <span class="tag">MongoDB</span>
-              <span class="tag">Mongoose</span>
-              <span class="tag">MySQL</span>
+            <div class="hero-floating-card floating-card-2" aria-hidden="true">
+              <div class="card-num">LOGIC</div>
+              <div class="card-title">180+ Solved</div>
+              <div class="card-desc">Algorithmic Problem Solving on LeetCode</div>
             </div>
-          </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">build</span>
-              Tools
-            </h3>
-            <div class="tag-row">
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">VS Code</span>
-            </div>
-          </div>
+            <!-- Stylized Glass Developer Showcase Card -->
+            <div class="portrait-frame">
+              <div class="dev-avatar-card">
+                <div class="avatar-top-bar">
+                  <div class="window-dots" aria-hidden="true">
+                    <span class="window-dot window-dot--red"></span>
+                    <span class="window-dot window-dot--amber"></span>
+                    <span class="window-dot window-dot--green"></span>
+                  </div>
+                  <span class="glass-pill" style="font-size: 0.7rem; padding: 0.2rem 0.55rem;">dev.cse</span>
+                </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">memory</span>
-              AI / Data
-            </h3>
-            <div class="tag-row">
-              <span class="tag">AI/ML</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
+                <div class="avatar-center-badge">
+                  <div class="avatar-monogram-circle">
+                    <img 
+                      src="assets/images/profile.jpg" 
+                      alt="Dinesh A"
+                      class="avatar-profile-image"
+                    >
+                </div>               
+
+
+                <div class="avatar-bottom-specs">
+                  <span>VSB Technical Campus</span>
+                  <span>B.E. CSE '28</span>
+                </div>
+              </div>
+
+              <div class="portrait-tag">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Dinesh • CS Engineer</span>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section scroll-target" id="projects">
-    <div class="container">
-      <span class="section-number">03 / Selected Work</span>
-      <h2 class="headline-md mb-section-head">Projects</h2>
-      <div class="divider mb-lg"></div>
+    <!-- =======================================================================
+         SECTION: CAPABILITIES / CORE COMPETENCIES (01 / CAPABILITIES)
+         ======================================================================= -->
+    <section class="section scroll-target" id="capabilities">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Core Competencies</h2>
+          <p class="section-subtitle">Technical skills, frameworks, and tools I leverage to engineer robust software solutions.</p>
+        </div>
 
-      <div class="project-list">
+        <div class="capabilities-grid">
 
-        <!-- Project 1: RecordMate -->
-        <article class="project-row">
-          <div class="project-media" data-project="recordmate">
-            <img class="project-image" src="assets/projects/recordmate.png" alt="RecordMate application screenshot">
-            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">article</span>
-          </div>
-          <div class="project-info">
-            <h3 class="headline-md project-title hover-underline">
-              RecordMate
-              <span class="badge">Development Project</span>
-            </h3>
-            <p class="body-lg">A platform that connects people who need handwritten record work with people who can provide that service. Users can create record requests and providers can discover suitable nearby requests.</p>
-            <div class="project-meta">
-              <h4 class="label-caps project-meta-label">Technologies</h4>
-              <p class="technical-text project-tech">React, Vite, Tailwind CSS, Node.js, Express, MongoDB, Mongoose, JWT, Socket.IO</p>
+          <!-- Card 1: Programming -->
+          <div class="glass-card capability-card reveal-on-scroll">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">Core Languages</span>
+                <h3 class="capability-title">Programming</h3>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="#" class="project-link" aria-disabled="true" tabindex="-1">
-                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo
-              </a>
-              <a href="https://github.com/Dinesh-A-Code/RecordMate" class="project-link" target="_blank" rel="noopener noreferrer">
-                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source<span class="sr-only"> (opens in new tab)</span>
-              </a>
+            <div class="tags-cluster">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">JavaScript</span>
             </div>
           </div>
-        </article>
 
-        <!-- Project 2: SD Flowers (media/info order reversed on desktop) -->
-        <article class="project-row project-row--reverse">
-          <div class="project-info">
-            <h3 class="headline-md project-title hover-underline">
-              SD Flowers
-              <span class="badge">Live Project</span>
-            </h3>
-            <p class="body-lg">A responsive website for a flower business including product browsing, categories, custom order form, and WhatsApp integration.</p>
-            <div class="project-meta">
-              <h4 class="label-caps project-meta-label">Technologies</h4>
-              <p class="technical-text project-tech">React, Vite, TypeScript, Tailwind CSS</p>
+          <!-- Card 2: Frontend -->
+          <div class="glass-card capability-card reveal-on-scroll delay-1">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">Client-Side</span>
+                <h3 class="capability-title">Frontend Engineering</h3>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://sd-flowers.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">
-                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span> Live Demo<span class="sr-only"> (opens in new tab)</span>
-              </a>
-              <a href="#" class="project-link" aria-disabled="true" tabindex="-1">
-                <span class="material-symbols-outlined" aria-hidden="true">code</span> Source
-              </a>
+            <div class="tags-cluster">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
             </div>
           </div>
-          <div class="project-media" data-project="sd-flowers">
-            <img class="project-image" src="assets/projects/sd-flowers.png" alt="SD Flowers website screenshot">
-            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">local_florist</span>
-          </div>
-        </article>
 
-        <!-- Project 3: PhishSight -->
-        <article class="project-row">
-          <div class="project-media" data-project="phishsight">
-            <img class="project-image" src="assets/projects/phishsight.png" alt="PhishSight application screenshot">
-            <span class="material-symbols-outlined project-media-icon" aria-hidden="true">security</span>
-          </div>
-          <div class="project-info">
-            <h3 class="headline-md project-title hover-underline">
-              PhishSight
-              <span class="badge">Development Project</span>
-            </h3>
-            <p class="body-lg">A cybersecurity project focused on detecting potentially phishing-related content using multiple suspicious signals.</p>
-            <div class="project-meta">
-              <h4 class="label-caps project-meta-label">Focus</h4>
-              <p class="technical-text project-tech">Cybersecurity, Threat Detection, Data Analysis</p>
+          <!-- Card 3: Backend -->
+          <div class="glass-card capability-card reveal-on-scroll delay-2">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"></rect><rect width="20" height="8" x="2" y="14" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">Server &amp; APIs</span>
+                <h3 class="capability-title">Backend Architecture</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Django</span>
             </div>
           </div>
-        </article>
 
+          <!-- Card 4: Database -->
+          <div class="glass-card capability-card reveal-on-scroll">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">Storage &amp; Models</span>
+                <h3 class="capability-title">Databases &amp; SQL</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Tools & Workflow -->
+          <div class="glass-card capability-card reveal-on-scroll delay-1">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">DevOps &amp; Workflow</span>
+                <h3 class="capability-title">Tools &amp; Platforms</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">GitHub</span>
+              <span class="tech-tag">VS Code</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Vercel</span>
+              <span class="tech-tag">Antigravity</span>
+            </div>
+          </div>
+
+          <!-- Card 6: AI & Problem Solving -->
+          <div class="glass-card capability-card reveal-on-scroll delay-2">
+            <div class="capability-header">
+              <div class="capability-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="M4.93 19.07l2.83-2.83"></path><path d="M16.24 7.76l2.83-2.83"></path></svg>
+              </div>
+              <div class="capability-meta">
+                <span class="capability-cat">Logic &amp; Intelligence</span>
+                <h3 class="capability-title">AI &amp; Data Analysis</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-tag">AI/ML Fundamentals</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">Algorithms</span>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ PROBLEM SOLVING / GITHUB (Code & Logic) ============ -->
-  <section class="section split-section scroll-target" id="problem-solving">
-    <div class="container split-grid">
-      <div class="split-label">
-        <span class="section-number">04 / Metrics</span>
-        <h2 class="headline-md">Code &amp; Logic</h2>
-      </div>
-      <div class="split-content">
-        <div class="divider"></div>
-        <div class="stats-grid">
+    <!-- =======================================================================
+         SECTION: ABOUT (02 / ABOUT)
+         ======================================================================= -->
+    <section class="section scroll-target" id="about">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Background, philosophy, and engineering priorities.</p>
+        </div>
 
-          <a class="glass-panel stat-card" href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer" aria-label="View full LeetCode profile (opens in new tab)">
-            <div class="stat-card-head">
-              <h3 class="headline-sm">LeetCode</h3>
-              <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">code_blocks</span>
+        <div class="about-grid">
+
+          <!-- Left Editorial Card -->
+          <div class="glass-card about-editorial-card reveal-on-scroll">
+            <p class="about-intro-text">
+              I am a <strong>Computer Science Engineering student</strong> at VSB College of Engineering Technical Campus with a strong foundation in software engineering, full-stack web development, and algorithmic problem solving.
+            </p>
+            <p class="about-intro-text">
+              My engineering approach is focused on building <strong>practical and robust digital solutions</strong> that solve real problems. From developing hyperlocal coordination platforms like RecordMate to delivering responsive web products with seamless API integrations, I thrive on continuous hands-on learning and writing clean, scalable code.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-label">01 / BUILD</div>
+                <h4 class="pillar-title">Full-Stack Apps</h4>
+                <p class="pillar-desc">Engineering scalable React &amp; Node.js applications with secure authentication and real-time sockets.</p>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-label">02 / SOLVE</div>
+                <h4 class="pillar-title">Clean Logic</h4>
+                <p class="pillar-desc">Deconstructing complex computational challenges with rigorous algorithmic analysis.</p>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-label">03 / LEARN</div>
+                <h4 class="pillar-title">Modern Tools</h4>
+                <p class="pillar-desc">Continuously expanding my knowledge of distributed systems, databases, and AI tooling.</p>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-label">04 / CREATE</div>
+                <h4 class="pillar-title">User Experience</h4>
+                <p class="pillar-desc">Designing intuitive, high-performance, and accessible web interfaces.</p>
+              </div>
             </div>
-            <dl class="stat-rows">
-              <div class="stat-row">
-                <dt>Solved</dt>
-                <dd class="stat-value stat-value--accent" data-stat="leetcode-solved">—</dd>
+          </div>
+
+          <!-- Right Highlights & Focus Card -->
+          <div class="glass-card about-highlights-card reveal-on-scroll delay-1">
+            <h3 class="highlights-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Key Highlights</span>
+            </h3>
+
+            <div class="stats-summary-grid">
+              <div class="stat-box">
+                <div class="stat-box-val">8.44</div>
+                <div class="stat-box-label">Degree CGPA</div>
               </div>
-              <div class="stat-row">
-                <dt>Easy</dt>
-                <dd class="stat-value" data-stat="leetcode-easy">—</dd>
+              <div class="stat-box">
+                <div class="stat-box-val">180+</div>
+                <div class="stat-box-label">LeetCode Solved</div>
               </div>
-              <div class="stat-row">
-                <dt>Medium</dt>
-                <dd class="stat-value" data-stat="leetcode-medium">—</dd>
+              <div class="stat-box">
+                <div class="stat-box-val">6+</div>
+                <div class="stat-box-label">GitHub Repos</div>
               </div>
-              <div class="stat-row stat-row--last">
-                <dt>Hard</dt>
-                <dd class="stat-value" data-stat="leetcode-hard">—</dd>
+              <div class="stat-box">
+                <div class="stat-box-val">2028</div>
+                <div class="stat-box-label">Graduation</div>
               </div>
-            </dl>
-            <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+            </div>
+
+            <h4 class="highlights-title" style="margin-top: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span>Current Areas of Focus</span>
+            </h4>
+
+            <div class="focus-list">
+              <div class="focus-item">
+                <svg class="focus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full-Stack Web Architecture (React, Node.js, Express, MongoDB)</span>
+              </div>
+              <div class="focus-item">
+                <svg class="focus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Real-time Communication Systems with WebSockets &amp; Socket.IO</span>
+              </div>
+              <div class="focus-item">
+                <svg class="focus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Data Structures, System Design &amp; Competitive Programming</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: EDUCATION (03 / EDUCATION)
+         ======================================================================= -->
+    <section class="section scroll-target" id="education">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Academics</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic foundations in Computer Science Engineering.</p>
+        </div>
+
+        <div class="timeline-list">
+
+          <div class="glass-card timeline-card reveal-on-scroll">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <h3 class="timeline-title">Bachelor of Engineering in Computer Science and Engineering</h3>
+              <span class="timeline-period">09/2024 – 04/2028</span>
+            </div>
+            <div class="timeline-institution">VSB College of Engineering Technical Campus</div>
+            <p class="timeline-details">
+              Undergraduate program focused on core computer science disciplines including Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, and Full-Stack Software Engineering.
+            </p>
+            <div class="badge-cgpa">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>CGPA: 8.44</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: CERTIFICATIONS (04 / CREDENTIALS)
+         ======================================================================= -->
+    <section class="section scroll-target" id="certifications">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Certifications &amp; Learning</h2>
+          <p class="section-subtitle">Verified certificates, hackathons, and technical development programs.</p>
+        </div>
+
+        <div class="certifications-grid">
+
+          <!-- Cert 1: Java for Beginners -->
+          <div class="glass-card cert-card reveal-on-scroll">
+            <div>
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="cert-name">Java for Beginners</h3>
+              <p class="cert-org">Infosys Springboard • Completed Nov 2025</p>
+              <p class="card-desc">Comprehensive training in Java fundamentals, object-oriented programming concepts, and memory management.</p>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/java-for-beginners.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 2: HTML5 -->
+          <div class="glass-card cert-card reveal-on-scroll delay-1">
+            <div>
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="cert-name">HTML5 — The Language</h3>
+              <p class="cert-org">Wingspan Issued • Completed July 2026</p>
+              <p class="card-desc">Training in HTML5 semantic document structure, accessibility standards, and modern web application markup.</p>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/html5.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: BlackBox AI Hackathon -->
+          <div class="glass-card cert-card reveal-on-scroll delay-2">
+            <div>
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="cert-name">BlackBox AI Hackathon</h3>
+              <p class="cert-org">Hackathon Participation</p>
+              <p class="card-desc">Collaborative fast-paced AI hackathon tackling real-world problem statements and AI application development.</p>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/blackbox-ai-hackathon-participant.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 4: ISP Internship Offer -->
+          <div class="glass-card cert-card reveal-on-scroll delay-3">
+            <div>
+              <div class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <h3 class="cert-name">ISP Internship Selection</h3>
+              <p class="cert-org">Internshala Student Partner</p>
+              <p class="card-desc">Selected for the student partnership program representing campus initiatives and leadership activities.</p>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/isp-internship-offer.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Selection Letter</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: EXPERIENCE & GROWTH (05 / EXPERIENCE)
+         ======================================================================= -->
+    <section class="section scroll-target" id="experience">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Experience &amp; Technical Growth</h2>
+          <p class="section-subtitle">Gaining competencies through hands-on product development, open-source projects, and leadership initiatives.</p>
+        </div>
+
+        <div class="timeline-list">
+
+          <!-- Experience 1: Product Engineering -->
+          <div class="glass-card timeline-card reveal-on-scroll">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <h3 class="timeline-title">Full-Stack Software Development &amp; Architecture</h3>
+              <span class="timeline-period">2024 – Present</span>
+            </div>
+            <div class="timeline-institution">Self-Directed Product Engineering &amp; Open-Source</div>
+            <p class="timeline-details">
+              • Engineered RecordMate from concept to implementation, architecting a real-time WebSocket communication layer with Socket.IO, JWT token authentication, and MongoDB storage.<br>
+              • Built and deployed SD Flowers, integrating responsive UI components with Tailwind CSS and a direct WhatsApp messaging automation channel for customer orders.<br>
+              • Continuous practice on LeetCode solving 180+ problems in data structures, graph traversals, and dynamic programming.
+            </p>
+          </div>
+
+          <!-- Experience 2: ISP Selection -->
+          <div class="glass-card timeline-card reveal-on-scroll delay-1">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <h3 class="timeline-title">Internshala Student Partner (ISP Selection)</h3>
+              <span class="timeline-period">Selected Student Partner</span>
+            </div>
+            <div class="timeline-institution">Internshala</div>
+            <p class="timeline-details">
+              • Selected as a campus representative to foster career development, technical skill building, and internship awareness among undergraduate peers.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: PROJECTS (06 / SELECTED WORK)
+         ======================================================================= -->
+    <section class="section scroll-target" id="projects">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Selected Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications engineered with modern frontend, backend, and security frameworks.</p>
+        </div>
+
+        <div class="projects-showcase">
+
+          <!-- Featured Spotlight Project: RecordMate -->
+          <article class="glass-card featured-spotlight-card reveal-on-scroll">
+            <div class="spotlight-info">
+              <div class="spotlight-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Spotlight Project</span>
+              </div>
+              <h3 class="spotlight-title">RecordMate</h3>
+              <p class="spotlight-desc">
+                A hyperlocal student-to-student platform that coordinates assistance with physical college record books. Requesters post record-writing tasks, and nearby providers can discover, accept, chat in real-time via WebSockets, and complete them with built-in rating verification.
+              </p>
+              <div class="spotlight-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Socket.IO</span>
+                <span class="tech-tag">JWT</span>
+              </div>
+              <div class="spotlight-actions">
+                <a href="https://github.com/Dinesh-A-Code/RecordMate" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                  <span>View Source Code</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </a>
+              </div>
+            </div>
+            <div class="spotlight-media">
+              <img src="assets/projects/recordmate.png" alt="RecordMate application screenshot showing the student dashboard and record coordinator interface" class="project-img" width="800" height="500" loading="eager">
+            </div>
+          </article>
+
+          <!-- Secondary Projects Grid -->
+          <div class="projects-grid">
+
+            <!-- Project 2: SD Flowers -->
+            <article class="glass-card project-card reveal-on-scroll">
+              <div>
+                <div class="project-card-media">
+                  <img src="assets/projects/sd-flowers.png" alt="SD Flowers commercial website screenshot" class="project-img" width="600" height="375" loading="eager">
+                </div>
+                <div class="project-card-header">
+                  <span class="project-card-type">E-Commerce Showcase</span>
+                  <span class="glass-pill" style="padding: 0.2rem 0.6rem; font-size: 0.75rem; color: var(--accent-emerald);">Live Project</span>
+                </div>
+                <h3 class="project-card-title">SD Flowers</h3>
+                <p class="project-card-desc">
+                  A responsive website for a floral boutique featuring dynamic product catalog browsing, categorized arrangements, custom bouquet inquiry forms, and direct WhatsApp customer ordering integration.
+                </p>
+                <div class="tags-cluster" style="margin-bottom: 1rem;">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-links">
+                  <a href="https://sd-flowers.vercel.app" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <span>Live Demo</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: PhishSight -->
+            <article class="glass-card project-card reveal-on-scroll delay-1">
+              <div>
+                <div class="project-card-media">
+                  <img src="assets/projects/phishsight.png" alt="PhishSight cybersecurity threat detection screenshot" class="project-img" width="600" height="375" loading="eager">
+                </div>
+                <div class="project-card-header">
+                  <span class="project-card-type">Cybersecurity Analysis</span>
+                  <span class="glass-pill" style="padding: 0.2rem 0.6rem; font-size: 0.75rem; color: var(--accent-primary);">Security Dev</span>
+                </div>
+                <h3 class="project-card-title">PhishSight</h3>
+                <p class="project-card-desc">
+                  A cybersecurity project focused on detecting suspicious phishing content, scanning URL parameters, identifying deceptive website indicators, and analyzing threat telemetry across incoming web content.
+                </p>
+                <div class="tags-cluster" style="margin-bottom: 1rem;">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Threat Detection</span>
+                  <span class="tech-tag">Security Heuristics</span>
+                  <span class="tech-tag">Data Analytics</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-links">
+                  <span class="glass-pill" style="font-size: 0.75rem;">Security Research</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: PROBLEM SOLVING & METRICS (07 / METRICS)
+         ======================================================================= -->
+    <section class="section scroll-target" id="problem-solving">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <span class="section-tag">Thinking &amp; Metrics</span>
+          <h2 class="section-title">Problem Solving &amp; Code Stats</h2>
+          <p class="section-subtitle">Engineering mindset and live competitive coding milestones.</p>
+        </div>
+
+        <!-- 4 Mindset Cards -->
+        <div class="mindset-grid">
+          <div class="glass-card mindset-card reveal-on-scroll">
+            <span class="mindset-num">01</span>
+            <h3 class="mindset-title">Understand</h3>
+            <p class="mindset-desc">Analyze boundary conditions, mathematical constraints, and input edge cases thoroughly before writing code.</p>
+          </div>
+          <div class="glass-card mindset-card reveal-on-scroll delay-1">
+            <span class="mindset-num">02</span>
+            <h3 class="mindset-title">Break Down</h3>
+            <p class="mindset-desc">Deconstruct complex computational tasks into modular, testable sub-problems with clear state boundaries.</p>
+          </div>
+          <div class="glass-card mindset-card reveal-on-scroll delay-2">
+            <span class="mindset-num">03</span>
+            <h3 class="mindset-title">Build</h3>
+            <p class="mindset-desc">Implement clean, idiomatic solutions utilizing appropriate data structures and object-oriented principles.</p>
+          </div>
+          <div class="glass-card mindset-card reveal-on-scroll delay-3">
+            <span class="mindset-num">04</span>
+            <h3 class="mindset-title">Optimize</h3>
+            <p class="mindset-desc">Benchmark time and space complexities, eliminate redundant operations, and maximize computational efficiency.</p>
+          </div>
+        </div>
+
+        <!-- Live Developer Metrics Grid -->
+        <div class="stats-showcase-grid">
+
+          <!-- LeetCode Card -->
+          <a class="glass-card dev-stat-card reveal-on-scroll" href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer" aria-label="View full LeetCode profile (opens in new tab)">
+            <div>
+              <div class="dev-stat-header">
+                <div class="dev-stat-brand">
+                  <div class="dev-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="color: #FFA116;"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.604-.488-1.328-.79-2.096-.867-.09-.009-.18-.013-.27-.013zM16.5 13a1.5 1.5 0 1 0 0 3h6a1.5 1.5 0 1 0 0-3h-6z"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="dev-stat-name">LeetCode</h3>
+                    <span class="dev-stat-handle">@Dinesh_A_Code</span>
+                  </div>
+                </div>
+                <span class="glass-pill" style="font-size: 0.75rem; color: var(--accent-primary);">Live Metric</span>
+              </div>
+
+              <dl class="stat-metric-row">
+                <div class="stat-metric-item">
+                  <dt>Solved</dt>
+                  <dd data-stat="leetcode-solved">181</dd>
+                </div>
+                <div class="stat-metric-item">
+                  <dt>Easy</dt>
+                  <dd class="easy" data-stat="leetcode-easy">86</dd>
+                </div>
+                <div class="stat-metric-item">
+                  <dt>Medium</dt>
+                  <dd class="medium" data-stat="leetcode-medium">73</dd>
+                </div>
+                <div class="stat-metric-item">
+                  <dt>Hard</dt>
+                  <dd class="hard" data-stat="leetcode-hard">22</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="stat-card-cta">
+              <span>View Full LeetCode Profile</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
           </a>
 
-          <a class="glass-panel stat-card scroll-target" id="github" href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer" aria-label="View full GitHub profile (opens in new tab)">
-            <div class="stat-card-head">
-              <h3 class="headline-sm">GitHub</h3>
-              <span class="material-symbols-outlined stat-card-icon" aria-hidden="true">terminal</span>
+          <!-- GitHub Card -->
+          <a class="glass-card dev-stat-card reveal-on-scroll delay-1" id="github" href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer" aria-label="View full GitHub profile (opens in new tab)">
+            <div>
+              <div class="dev-stat-header">
+                <div class="dev-stat-brand">
+                  <div class="dev-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="color: #0F172A;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="dev-stat-name">GitHub</h3>
+                    <span class="dev-stat-handle">@Dinesh-A-Code</span>
+                  </div>
+                </div>
+                <span class="glass-pill" style="font-size: 0.75rem; color: var(--accent-primary);">Public Profile</span>
+              </div>
+
+              <dl class="stat-metric-row stat-metric-row--duo">
+                <div class="stat-metric-item">
+                  <dt>Repositories</dt>
+                  <dd data-stat="github-repositories">6</dd>
+                </div>
+                <div class="stat-metric-item">
+                  <dt>Followers</dt>
+                  <dd data-stat="github-followers">4</dd>
+                </div>
+              </dl>
             </div>
-            <dl class="stat-rows">
-              <div class="stat-row">
-                <dt>Repositories</dt>
-                <dd class="stat-value stat-value--accent" data-stat="github-repositories">—</dd>
-              </div>
-              <div class="stat-row stat-row--last">
-                <dt>Followers</dt>
-                <dd class="stat-value" data-stat="github-followers">—</dd>
-              </div>
-            </dl>
-            <span class="stat-card-cta">View Profile <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+
+            <div class="stat-card-cta">
+              <span>View Repositories on GitHub</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
           </a>
 
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ ACHIEVEMENTS ============ -->
-  <section class="section split-section scroll-target" id="achievements">
-    <div class="container split-grid">
-      <div class="split-label">
-        <span class="section-number">05 / Milestones</span>
-        <h2 class="headline-md">Achievements &amp; Certifications</h2>
-      </div>
-      <div class="split-content">
-        <div class="divider"></div>
-        <div class="skills-grid">
+    <!-- =======================================================================
+         SECTION: CONTACT (08 / CONNECT)
+         ======================================================================= -->
+    <section class="section scroll-target" id="contact">
+      <div class="container">
+        <div class="glass-card contact-container-card reveal-on-scroll">
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">workspace_premium</span>
-              Certifications
-            </h3>
-            <div class="tag-row">
-              <span class="tag">Java for Beginners</span>
-              <span class="tag">HTML5</span>
-            </div>
-            <div class="project-links">
-              <a href="assets/certificates/java-for-beginners.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="Java for Beginners certificate" aria-label="View Java for Beginners certificate (opens in new tab)">
-                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+          <!-- Left Info Column -->
+          <div class="contact-info">
+            <span class="section-tag">Connect</span>
+            <h2 class="contact-headline">Let's build something useful together.</h2>
+            <p class="contact-subtext">
+              Have an idea, project, internship opportunity, or simply want to connect? Feel free to reach out. I would love to hear from you.
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:adinesh09092005@gmail.com" class="contact-method-item" data-copy-email aria-label="Copy email address to clipboard">
+                <div class="contact-method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">Direct Email (Click to copy)</div>
+                  <div class="contact-method-val">adinesh09092005@gmail.com</div>
+                </div>
               </a>
-              <a href="assets/certificates/html5.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="HTML5 certificate" aria-label="View HTML5 certificate (opens in new tab)">
-                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
-              </a>
-            </div>
-          </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">groups</span>
-              Participation
-            </h3>
-            <div class="tag-row">
-              <span class="tag">BlackBox AI Hackathon Participant</span>
-            </div>
-            <div class="project-links">
-              <a href="assets/certificates/blackbox-ai-hackathon-participant.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="BlackBox AI Hackathon participation certificate" aria-label="View BlackBox AI Hackathon participation certificate (opens in new tab)">
-                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
+              <a href="tel:+918056752258" class="contact-method-item" aria-label="Call phone number">
+                <div class="contact-method-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">Phone &amp; Location</div>
+                  <div class="contact-method-val">+91 8056752258 • India</div>
+                </div>
               </a>
             </div>
           </div>
 
-          <div class="glass-panel skill-card">
-            <h3 class="headline-sm skill-card-title">
-              <span class="material-symbols-outlined skill-icon" aria-hidden="true">work</span>
-              Experience
-            </h3>
-            <div class="tag-row">
-              <span class="tag">ISP Internship Offer / Selection</span>
+          <!-- Right Form Column -->
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" autocomplete="name" required>
+              <span class="form-error" id="name-error" role="alert"></span>
             </div>
-            <div class="project-links">
-              <a href="assets/certificates/isp-internship-offer.pdf" class="project-link" target="_blank" rel="noopener noreferrer" title="ISP Internship offer / selection document" aria-label="View ISP Internship offer or selection document (opens in new tab)">
-                <span class="material-symbols-outlined" aria-hidden="true">description</span> View Certificate
-              </a>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" autocomplete="email" required>
+              <span class="form-error" id="email-error" role="alert"></span>
             </div>
-          </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or opportunity..." rows="4" required></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Send Message</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
 
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section scroll-target" id="contact">
-    <div class="container">
-      <div class="contact-panel">
-        <div class="contact-intro">
-          <span class="section-number">06 / Connect</span>
-          <h2 class="headline-md contact-heading">Let's build something together.</h2>
-          <p class="body-lg contact-copy">I'm currently available for freelance projects and open to new full-time opportunities.</p>
-          <a class="contact-email" href="mailto:adinesh09092005@gmail.com">
-            adinesh09092005@gmail.com
-            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-          </a>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <div class="brand">
+            <span class="brand-badge" aria-hidden="true">DA</span>
+            <span class="brand-text">Dinesh</span>
+          </div>
+          <p class="footer-tagline">Software Developer • Computer Science Engineering Student</p>
         </div>
 
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="form-field">
-            <label for="name" class="label-caps">Name</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
-            <span class="form-error" id="name-error" role="alert"></span>
-          </div>
-          <div class="form-field">
-            <label for="email" class="label-caps">Email</label>
-            <input type="email" id="email" name="email" placeholder="adinesh09092005@gmail.com" autocomplete="email" required>
-            <span class="form-error" id="email-error" role="alert"></span>
-          </div>
-          <div class="form-field">
-            <label for="message" class="label-caps">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
-            <span class="form-error" id="message-error" role="alert"></span>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block form-submit">Send Message</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#capabilities" class="footer-link">Skills</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#education" class="footer-link">Education</a>
+          <a href="#certifications" class="footer-link">Certificates</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#problem-solving" class="footer-link">Problem Solving</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Dinesh. All rights reserved.</p>
+        <p>Built with code, curiosity &amp; creativity.</p>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="brand footer-brand">Dinesh A</div>
-      <p class="body-base footer-copy">© 2026 Dinesh A. All rights reserved.</p>
-    </div>
-    <div class="footer-links">
-      <a href="https://github.com/Dinesh-A-Code" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a>
-      <a href="https://www.linkedin.com/in/dinesh-a-code" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
-      <a href="https://leetcode.com/u/Dinesh_A_Code/" target="_blank" rel="noopener noreferrer">LeetCode<span class="sr-only"> (opens in new tab)</span></a>
-      <a href="mailto:adinesh09092005@gmail.com">Email</a>
-    </div>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
 </html>
