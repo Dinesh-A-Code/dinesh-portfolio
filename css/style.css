@@ -913,9 +913,9 @@ ul, ol {
 .window-dot--green { background: #10B981; }
 
 .avatar-monogram-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 16px;
+  width: 180px;
+  height: 180px;
+  border-radius: 18px;
   overflow: hidden;
   flex-shrink: 0;
   display: flex;
